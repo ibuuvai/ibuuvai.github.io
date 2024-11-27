@@ -22,30 +22,38 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 230, 82, 255;
-		--accent-light: 250, 224, 255;
-		--accent-dark: 101, 10, 115;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--accent: 147, 112, 219;        /* Light purple */
+		--accent-light: 230, 230, 250;  /* Lavender */
+		--accent-dark: 75, 0, 130;      /* Indigo */
+		--background: 13, 2, 33;        /* Dark purple background */
+		--text: 255, 255, 255;          /* White text */
 	}
+	
 	html {
-		font-family: 'Inter', system-ui, sans-serif;
-		background: #0a0a0f;
+		font-family: 'Space Grotesk', system-ui, sans-serif;
+		background: rgb(var(--background));
+		color: rgb(var(--text));
 		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		background: linear-gradient(
+			45deg,
+			rgba(var(--background), 1) 0%,
+			rgba(var(--accent-dark), 0.2) 100%
+		);
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.glowing-text {
+		text-shadow: 0 0 10px rgba(var(--accent-light), 0.5),
+					 0 0 20px rgba(var(--accent-light), 0.3),
+					 0 0 30px rgba(var(--accent-light), 0.1);
 	}
 </style>
