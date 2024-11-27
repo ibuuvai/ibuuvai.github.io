@@ -1,29 +1,173 @@
 ---
 ---
 
-<div class="avatar-container">
-    <img src="/images/vai.avif" alt="vai avatar" class="avatar" />
+<div class="dashboard-container">
+    <div class="main-section">
+        <!-- Name Section -->
+        <div class="glass-panel name-section">
+            <h1 class="name-title">Vai</h1>
+        </div>
+
+        <!-- Avatar Section -->
+        <div class="avatar-section">
+            <div class="avatar-container">
+                <img src="/images/vai.avif" alt="vai avatar" class="avatar" />
+            </div>
+        </div>
+
+        <!-- Spotify Section -->
+        <div class="glass-panel spotify-section">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EphPFA7EgGYvJIL9ddSGi?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="glass-panel stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>158</h3>
+                <p>Followers</p>
+            </div>
+            <div class="stat-item">
+                <h3>2024</h3>
+                <p>Created</p>
+            </div>
+            <div class="stat-item">
+                <h3>42</h3>
+                <p>Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3>1.2K</h3>
+                <p>Contributions</p>
+            </div>
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Technologies</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
+    .dashboard-container {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        gap: 2rem;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 6rem 2rem 2rem 2rem;
+        min-height: 100vh;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 1rem;
+        height: fit-content;
+    }
+
+    .name-section {
+        margin-top: 4rem;
+        align-self: end;
+        padding: 1.5rem;
+    }
+
+    .avatar-section {
+        margin-top: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .spotify-section {
+        grid-column: 1 / -1;
+        margin-top: 0.5rem;
+        padding: 1rem;
+        height: fit-content;
+    }
+
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stats-section {
+        padding: 1.5rem;
+        height: fit-content;
+        align-self: start;
+    }
+
+    .name-title {
+        font-size: 3rem;
+        color: white;
+        margin: 0;
+    }
+
     .avatar-container {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        margin: 2rem auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
     }
 
     .avatar {
+        max-width: 1200px;
         width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
+        height: auto;
         animation: float 6s ease-in-out infinite;
-        box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+        filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.4));
+    }
+
+    .stats-container {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .stat-item h3 {
+        margin: 0;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .stat-item p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
     }
 
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
+    }
+
+    @media (max-width: 768px) {
+        .dashboard-container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .main-section {
+            grid-template-columns: 1fr;
+        }
+
+        .avatar {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .glass-panel {
+            padding: 1rem;
+        }
     }
 </style> 
