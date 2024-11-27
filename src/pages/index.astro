@@ -7,95 +7,50 @@ import Avatar from '../components/Avatar.astro';
 	<main>
 		<Avatar />
 		<p class="subtitle">Digital Philosopher | Code Poet | Virtual Wanderer</p>
-		<p class="quote">
-			"The boundaries of our digital selves are limited only by our imagination."
-		</p>
-		<div class="social-links">
-			<a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" class="social-link">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-					<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-					<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-				</svg>
-			</a>
-			<a href="https://open.spotify.com/user/your-profile" target="_blank" rel="noopener noreferrer" class="social-link">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<circle cx="12" cy="12" r="10"></circle>
-					<path d="M8 14.5c2.5-1 5.5-1 8 0"></path>
-					<path d="M6.5 11.5c3.5-1 7.5-1 11 0"></path>
-					<path d="M5 8.5c4-1 9-1 13 0"></path>
-				</svg>
-			</a>
+		<div class="quote-container">
+			<p class="quote">
+				"The boundaries of our digital selves are limited only by our imagination."
+			</p>
 		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
+		margin: 0 auto;
 		width: 100%;
-		max-width: 1000px;
+		max-width: 1200px;
 		color: #fff;
 		min-height: 100vh;
-		padding: 0 1rem;
-	}
-
-	.hero {
-		height: 100vh;
+		padding: 2rem;
 		display: flex;
 		flex-direction: column;
-		padding: 2rem;
-	}
-
-	.hero-content {
-		flex: 1;
-		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 4rem;
-	}
-
-	h1 {
-		font-size: 8rem;
-		margin: 0;
-		font-weight: 400;
-		letter-spacing: 0.1em;
-		text-align: left;
 	}
 
 	.subtitle {
 		text-align: center;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		opacity: 0.8;
-		margin: 1rem 0;
+		margin: 2rem 0;
 		letter-spacing: 0.1em;
+	}
+
+	.quote-container {
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		padding: 1.5rem;
+		margin: 2rem auto;
+		max-width: 600px;
 	}
 
 	.quote {
 		font-style: italic;
 		opacity: 0.7;
-		max-width: 600px;
 		text-align: center;
-		margin: 2rem 0;
-		background: rgba(0, 0, 0, 0.3);
-		padding: 1rem;
-		border-radius: 4px;
-	}
-
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	.social-link {
-		color: rgb(138, 43, 226);
-		transition: all 0.3s ease;
-	}
-
-	.social-link:hover {
-		color: rgb(230, 230, 250);
-		transform: translateY(-2px);
+		margin: 0;
+		line-height: 1.6;
 	}
 </style>

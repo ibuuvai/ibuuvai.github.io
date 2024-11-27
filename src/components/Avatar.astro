@@ -11,38 +11,38 @@
         <!-- Avatar Section -->
         <div class="avatar-section">
             <div class="avatar-container">
-                <img src="/images/vai.avif" alt="vai avatar" class="avatar" />
+                <img src="/images/vai.webp" alt="vai avatar" class="avatar" />
             </div>
         </div>
 
         <!-- Spotify Section -->
         <div class="glass-panel spotify-section">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EphPFA7EgGYvJIL9ddSGi?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EphPFA7EgGYvJIL9ddSGi?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </div>
 
-    <!-- Stats Section -->
-    <div class="glass-panel stats-section">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>158</h3>
-                <p>Followers</p>
+    <!-- About Me Section -->
+    <div class="glass-panel about-section">
+        <div class="about-container">
+            <div class="about-item">
+                <h3>PRONOUNS</h3>
+                <p>He/him</p>
             </div>
-            <div class="stat-item">
-                <h3>2024</h3>
-                <p>Created</p>
+            <div class="about-item">
+                <h3>AGE&MBTI</h3>
+                <p>18, Mediator (INFP-T)</p>
             </div>
-            <div class="stat-item">
-                <h3>42</h3>
-                <p>Projects</p>
+            <div class="about-item">
+                <h3>INTEREST/HOBBIES</h3>
+                <p>playing games, writing, music, drawing, and anime</p>
             </div>
-            <div class="stat-item">
-                <h3>1.2K</h3>
-                <p>Contributions</p>
+            <div class="about-item">
+                <h3>LIKES</h3>
+                <p>Valorant, Sushi, Coffee, Tea, Thai food, anime, and Megumi Kato</p>
             </div>
-            <div class="stat-item">
-                <h3>15+</h3>
-                <p>Technologies</p>
+            <div class="about-item">
+                <h3>DISLIKES</h3>
+                <p>Lies, Fake, Phonies</p>
             </div>
         </div>
     </div>
@@ -51,41 +51,37 @@
 <style>
     .dashboard-container {
         display: grid;
-        grid-template-columns: 1fr 250px;
-        gap: 2rem;
+        grid-template-columns: 1fr 350px;
+        gap: 1rem;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 6rem 2rem 2rem 2rem;
-        min-height: 100vh;
     }
 
     .main-section {
         display: grid;
         grid-template-columns: 250px 1fr;
-        grid-template-rows: auto 1fr auto;
-        gap: 1rem;
-        height: fit-content;
+        grid-template-rows: auto 1fr min-content;
+        height: 100%;
     }
 
     .name-section {
-        margin-top: 4rem;
-        align-self: end;
+        margin-top: 1rem;
+        align-self: start;
         padding: 1.5rem;
     }
 
     .avatar-section {
-        margin-top: -2rem;
+        margin-top: 0;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 2rem;
+        padding-top: 0;
     }
 
     .spotify-section {
         grid-column: 1 / -1;
-        margin-top: 0.5rem;
         padding: 1rem;
-        height: fit-content;
+        margin-bottom: 0;
     }
 
     .glass-panel {
@@ -95,10 +91,39 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .stats-section {
+    .about-section {
         padding: 1.5rem;
-        height: fit-content;
-        align-self: start;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: auto;
+    }
+
+    .about-item {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .about-item h3 {
+        margin: 0;
+        color: white;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-item p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.4;
     }
 
     .name-title {
@@ -123,29 +148,6 @@
         filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.4));
     }
 
-    .stats-container {
-        display: grid;
-        gap: 1rem;
-    }
-
-    .stat-item {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 1rem;
-        border-radius: 15px;
-        text-align: center;
-    }
-
-    .stat-item h3 {
-        margin: 0;
-        color: white;
-        font-size: 1.5rem;
-    }
-
-    .stat-item p {
-        margin: 0;
-        color: rgba(255, 255, 255, 0.7);
-    }
-
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
@@ -154,20 +156,32 @@
     @media (max-width: 768px) {
         .dashboard-container {
             grid-template-columns: 1fr;
+            padding: 1rem;
             gap: 1rem;
         }
 
         .main-section {
             grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .name-section {
+            margin-top: 2rem;
+            text-align: center;
         }
 
         .avatar {
-            max-width: 600px;
-            width: 100%;
+            max-width: 400px;
         }
 
-        .glass-panel {
-            padding: 1rem;
+        .about-container {
+            gap: 0.75rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-container {
+            grid-template-columns: 1fr;
         }
     }
 </style> 
